@@ -33,27 +33,34 @@ Kafka Producer → Kafka Topic → Kafka Consumer
                               ▼
                        Analytics Dashboard
 
+Step 1: Clone the Repository
 
-py -3.11 -m pip install -r requirements.txt
+Step 2: py -3.11 -m pip install -r requirements.txt
 
-py -3.11 -m src.data_preprocessing
+Step 3: Download Dataset:
 
-py -3.11 -m pip install imbalanced-learn
+ https://www.kaggle.com/datasets/kartik2112/fraud-detection
+ 
+Place the dataset files in:  data/raw/
 
-py -3.11 -m src.feature_engineering
+Step 4: py -3.11 -m src.data_preprocessing
 
-py -3.11 -m src.train_logistic_regression
+Step 5: py -3.11 -m pip install imbalanced-learn
 
-py -3.11 -m src.train_random_forest
+Step 6: py -3.11 -m src.feature_engineering
 
-py -3.11 -m src.train_xgboost
+Step 7: py -3.11 -m src.train_logistic_regression
 
-py -3.11 -m src.train_lightgbm
+Step 8: py -3.11 -m src.train_random_forest
 
-py -3.11 -m src.model_selector
+Step 9: py -3.11 -m src.train_xgboost
 
-py -3.11 -m streaming.consumer
+Step 10: py -3.11 -m src.train_lightgbm
 
-py -3.11 -m streaming.producer
+Step 11: py -3.11 -m src.model_selector
 
-py -3.11 -m app.app
+Step 12: py -3.11 -m streaming.consumer
+
+Step 13: py -3.11 -m streaming.producer
+
+Step 14: py -3.11 -m app.app
