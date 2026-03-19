@@ -1,0 +1,42 @@
+# Core utilities
+python-dateutil==2.9.0
+pytz==2024.1
+six==1.16.0
+
+# Numerical computing
+numpy==1.26.4
+pandas==2.2.2
+
+# Data visualization
+matplotlib==3.8.4
+seaborn==0.13.2
+plotly==5.22.0
+
+# Machine Learning
+scikit-learn==1.4.2
+xgboost==2.0.3
+lightgbm==4.3.0
+
+# Model persistence
+joblib==1.4.2
+pickle-mixin==1.0.2
+
+# Kafka streaming
+kafka-python==2.0.2
+
+# Web framework
+Flask==3.0.3
+Flask-Login==0.6.3
+Werkzeug==3.0.3
+
+# Database
+SQLAlchemy==2.0.30
+
+# Environment configuration
+python-dotenv==1.0.1
+
+# Utilities
+tqdm==4.66.4
+
+# Testing
+pytest==8.2.2

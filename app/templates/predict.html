@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+<title>Fraud Prediction</title>
+
+<style>
+
+body{
+    font-family:Arial;
+    background:#0f172a;
+    color:white;
+    margin:0;
+}
+
+/* HEADER */
+
+.header{
+    background:#020617;
+    padding:16px 40px;
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    border-bottom:1px solid #1e293b;
+}
+
+.header-left{
+    font-size:20px;
+    font-weight:bold;
+}
+
+.header-right{
+    display:flex;
+    gap:25px;
+}
+
+.header-right a{
+    color:#60a5fa;
+    text-decoration:none;
+}
+
+.username{
+    color:#22c55e;
+    font-weight:bold;
+}
+
+/* CONTAINER */
+
+.container{
+    padding:40px;
+}
+
+/* FORM GRID */
+
+.form-grid{
+    display:grid;
+    grid-template-columns:repeat(2,1fr);
+    gap:20px;
+    margin-bottom:30px;
+}
+
+input{
+    width:100%;
+    padding:10px;
+    border-radius:5px;
+    border:none;
+}
+
+/* BUTTON */
+
+button{
+    background:#3b82f6;
+    padding:12px 25px;
+    border:none;
+    border-radius:6px;
+    color:white;
+    font-size:16px;
+    cursor:pointer;
+}
+
+button:hover{
+    background:#2563eb;
+}
+
+</style>
+
+</head>
+
+<body>
+
+<div class="header">
+
+<div class="header-left">
+Fraud Detection System
+</div>
+
+<div class="header-right">
+
+<div>
+Welcome, <span class="username">{{ session['user'] }}</span>
+</div>
+
+<a href="/dashboard">Dashboard</a>
+<a href="/predict">Predict</a>
+<a href="/logout" style="color:#f87171;">Logout</a>
+
+</div>
+
+</div>
+
+<div class="container">
+
+<h2>Manual Transaction Prediction</h2>
+
+<form method="POST">
+
+<table style="width:100%;border-spacing:20px;">
+
+<tr>
+<td>
+<input type="number" step="0.01" name="amt" placeholder="Transaction Amount" required>
+</td>
+
+<td>
+<input type="number" name="unix_time" placeholder="Unix Time" required>
+</td>
+</tr>
+
+<tr>
+<td>
+<input type="number" name="city_pop" placeholder="City Population" required>
+</td>
+
+<td>
+<input type="number" name="trans_hour" placeholder="Transaction Hour" required>
+</td>
+</tr>
+
+<tr>
+<td>
+<input type="number" name="trans_day" placeholder="Transaction Day" required>
+</td>
+
+<td>
+<input type="number" name="trans_month" placeholder="Transaction Month" required>
+</td>
+</tr>
+
+<tr>
+<td>
+<input type="number" name="age" placeholder="Customer Age" required>
+</td>
+
+<td>
+<input type="number" step="0.01" name="distance" placeholder="Distance From Home" required>
+</td>
+</tr>
+
+<tr>
+<td>
+<input type="number" name="merchant" placeholder="Merchant Encoding" required>
+</td>
+
+<td>
+<input type="number" name="category" placeholder="Category Encoding" required>
+</td>
+</tr>
+
+<tr>
+<td colspan="2" style="text-align:center;">
+<input type="number" name="zip" placeholder="ZIP Encoding" required style="width:50%;">
+</td>
+</tr>
+
+<tr>
+<td colspan="2" style="text-align:center;">
+
+<button type="submit">Predict Fraud</button>
+
+</td>
+</tr>
+
+</table>
+
+</form>
+
+</div>
+
+</body>
+</html>

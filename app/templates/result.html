@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+<title>Prediction Result</title>
+
+<style>
+
+body{
+    font-family:Arial;
+    background:#0f172a;
+    color:white;
+    margin:0;
+}
+
+.header{
+    background:#020617;
+    padding:16px 40px;
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+}
+
+.header-right{
+    display:flex;
+    gap:25px;
+}
+
+.username{
+    color:#22c55e;
+}
+
+.container{
+    padding:60px;
+    text-align:center;
+}
+
+.result-box{
+    background:#1e293b;
+    padding:40px;
+    border-radius:10px;
+    display:inline-block;
+}
+
+.low{color:#22c55e;}
+.medium{color:#facc15;}
+.high{color:#fb923c;}
+.critical{color:#ef4444;}
+
+</style>
+
+</head>
+
+<body>
+
+<div class="header">
+
+<div>
+Fraud Detection System
+</div>
+
+<div class="header-right">
+
+<div>
+Welcome, <span class="username">{{ session['user'] }}</span>
+</div>
+
+<a href="/dashboard">Dashboard</a>
+<a href="/predict">Predict</a>
+<a href="/logout" style="color:#f87171;">Logout</a>
+
+</div>
+
+</div>
+
+
+<div class="container">
+
+<div class="result-box">
+
+<h2>Prediction Result</h2>
+
+<p>Fraud Probability: <b>{{ probability }}</b></p>
+
+<h1 class="
+{% if risk == 'LOW RISK' %}low
+{% elif risk == 'MEDIUM RISK' %}medium
+{% elif risk == 'HIGH RISK' %}high
+{% else %}critical
+{% endif %}
+">
+
+{{ risk }}
+
+</h1>
+
+</div>
+
+</div>
+
+</body>
+</html>
