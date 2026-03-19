@@ -1,3 +1,5 @@
+# Financial-Fraud-Detection
+
 Dataset
    │
    ▼
@@ -31,8 +33,6 @@ Kafka Producer → Kafka Topic → Kafka Consumer
                               ▼
                        Analytics Dashboard
 
-
-# Financial-Fraud-Detection
 
 py -3.11 -m pip install -r requirements.txt
 
