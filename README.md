@@ -1,3 +1,37 @@
+Dataset
+   │
+   ▼
+Data Preprocessing
+   │
+   ▼
+Feature Engineering
+   │
+   ▼
+Machine Learning Models
+(Logistic Regression, Random Forest, XGBoost, LightGBM)
+   │
+   ▼
+Model Selection
+   │
+   ▼
+Best Model Saved
+   │
+   ▼
+Kafka Producer → Kafka Topic → Kafka Consumer
+                              │
+                              ▼
+                        Fraud Prediction
+                              │
+                              ▼
+                         SQLite Database
+                              │
+                              ▼
+                   Flask Web Application
+                              │
+                              ▼
+                       Analytics Dashboard
+
+
 # Financial-Fraud-Detection
 
 py -3.11 -m pip install -r requirements.txt
